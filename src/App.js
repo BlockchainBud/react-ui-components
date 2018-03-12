@@ -5,11 +5,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Header />
+          {/* You can use light, dark and transparent style  */}
+          <Header headerStyle="dark" />
       </div>
     );
   }
-
 }
 
 export default App;
