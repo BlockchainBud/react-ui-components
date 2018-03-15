@@ -42,7 +42,7 @@ class Button extends Component {
 	}
 
   _addButtonClass(className) {
-    
+
     //Size of the Button
     if(this.props.size) {
       className.push("btn-"+this.props.size);

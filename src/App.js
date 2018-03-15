@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import Header from "./components/Header/Header";
 import Button from "./components/Button/Button";
+import Footer from "./components/Footer/Footer";
 
 class App extends Component {
   render() {
@@ -10,7 +12,7 @@ class App extends Component {
           <Header headerStyle="dark" />
           <div className="main-container">
             <section>
-              <div className="container">
+              <Grid>
                 <h1>Buttons</h1>
                 <Button
                   link="#"
@@ -57,8 +59,9 @@ class App extends Component {
                       style={{}}
                     ><i className="ti-arrow-up"></i>
                   </Button>
-              </div>
+              </Grid>
             </section>
+            <Footer class="dark" />
           </div>
       </div>
     );

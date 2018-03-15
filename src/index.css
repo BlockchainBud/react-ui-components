@@ -126,6 +126,14 @@ hr.short-thick {
 .container {
   position: relative;
 }
+
+.container:before, .container:after {
+  display: table;
+  content: " ";
+  box-sizing: border-box;
+  clear: both;
+}
+
 .vnu {
   display: inline;
 }
