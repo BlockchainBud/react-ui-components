@@ -1,71 +1,32 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import Header from "./components/Header/Header";
-import Button from "./components/Button/Button";
-import Footer from "./components/Footer/Footer";
+import React, { Component } from 'react'
+import { Grid } from 'react-flexbox-grid'
+import Header from './components/Header/Header'
+import Button from './components/Button/Button'
+import Footer from './components/Footer/Footer'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <div className="App">
-          {/* You can use light, dark and transparent style  */}
-          <Header headerStyle="dark" />
-          <div className="main-container">
-            <section>
-              <Grid>
-                <h1>Buttons</h1>
-                <Button
-                  link="#"
-                  size="sm"
-                  rounded
-                  style={{
-                    color: 'white',
-                    backgroundColor: 'red',
-                    borderColor: '#000',
-                    hoverColor: '#000',
-                    hoverBgColor: 'gray',
-                    hoverBorderColor: "green"
-                  }}>Button</Button>
-
-                  <Button
-                    link="#"
-                    rounded
-                    style={{
-                      color: 'white',
-                      backgroundColor: 'blue',
-                      borderColor: 'yellow',
-                      hoverColor: 'blue',
-                      hoverBgColor: 'white',
-                      hoverBorderColor: "blue"
-                    }}>Button
-                  </Button>
-
-                  <Button
-                      link="#"
-                      style={{}}
-                    >Button
-                  </Button>
-
-                  <Button
-                      link="#"
-                      size="lg"
-                      style={{}}
-                    >Button
-                  </Button>
-
-                    <Button
-                      link="#"
-                      icon
-                      style={{}}
-                    ><i className="ti-arrow-up"></i>
-                  </Button>
-              </Grid>
-            </section>
-            <Footer class="dark" />
-          </div>
+        <Header headerStyle="light"/>
+        <Header headerStyle="dark"/>
+        <div className="main-container">
+          <section>
+            <Grid>
+              <h1>Buttons</h1>
+              <Button link="#" size="sm" rounded style={{}}>Button</Button>
+              <Button link="#" rounded style={{}}>Button</Button>
+              <Button link="#" style={{}}>Button</Button>
+              <Button link="#" size="lg" style={{}}>Large Button</Button>
+              <Button link="#" icon style={{}}><span className="ti-arrow-up"/></Button>
+              <Button link="#" rounded size="lg" style={{}}>New Button</Button>
+            </Grid>
+          </section>
+          <Footer class="dark"/>
+        </div>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
