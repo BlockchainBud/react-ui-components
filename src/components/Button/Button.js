@@ -6,19 +6,28 @@ class Button extends Component {
   constructor(props) {
     super(props);
 
-    const buttonStyle = this.props.style;
+    const defaultStyle = {
+      color: '#47b475',
+      backgroundColor: 'transparent',
+      borderColor: '#47b475',
+      hoverColor: '#fff',
+      hoverBgColor: '#47b475',
+      hoverBorderColor: '#47b475'
+    }
+
+    const buttonStyle = this.props.style ? this.props.style : defaultStyle;
 
     this.state = {
       style: {
-        color: buttonStyle.color ? buttonStyle.color : '#47b475',
-        backgroundColor: buttonStyle.backgroundColor ? buttonStyle.backgroundColor : 'transparent',
-        borderColor: buttonStyle.borderColor ? buttonStyle.borderColor : '#47b475'
+        color: buttonStyle.color,
+        backgroundColor: buttonStyle.backgroundColor,
+        borderColor: buttonStyle.borderColor
       },
       normalStyle : {},
       onHoverdStyle : {
-        color: buttonStyle.hoverColor ? buttonStyle.hoverColor : '#fff',
-        backgroundColor: buttonStyle.hoverBgColor ? buttonStyle.hoverBgColor : '#47b475',
-        borderColor: buttonStyle.hoverBorderColor ? buttonStyle.hoverBorderColor : '#47b475',
+        color: buttonStyle.hoverColor,
+        backgroundColor: buttonStyle.hoverBgColor,
+        borderColor: buttonStyle.hoverBorderColor,
       },
       hovered: false,
       className: ['btn']

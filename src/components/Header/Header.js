@@ -43,7 +43,7 @@ class Header extends Component {
               link="index.html"
               logoLight={logoLight}
               logoDark={logoDark}
-              alt="Foundry" />
+              alt="React UI" />
 
             <div className="module widget-handle mobile-toggle right visible-sm visible-xs">
                 <i className="ti-menu"></i>
