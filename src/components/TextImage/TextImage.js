@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import './TextImage.css';
+import React, { Component } from 'react'
+import { Grid, Col } from 'react-flexbox-grid'
+import PropTypes from 'prop-types'
+import './TextImage.css'
 
 export class TextImage extends Component {
-  render() {
+  render () {
     return (
-      <section className="image-edge">
+      <section className='image-edge'>
         {this.props.children}
       </section>
     )
@@ -13,10 +14,11 @@ export class TextImage extends Component {
 }
 
 export class Text extends Component {
-  render() {
+  render () {
+    const position = this.props.position ? this.props.position : 'right'
     return (
       <Grid>
-        <Col md={5} mdOffset={1} xs={7} xsOffset={1} className="v-align-transform right">
+        <Col md={5} xs={7} className={'v-align-transform ' + position}>
           {this.props.children}
         </Col>
       </Grid>
@@ -24,12 +26,29 @@ export class Text extends Component {
   }
 }
 
+Text.propTypes = {
+  position: PropTypes.string
+}
+
 export class Image extends Component {
-  render() {
-    return (
-      <Col md={6} xs={4} className="po img-content">
-        <img src={this.props.imgSrc} className="mb-xs-24" />
-      </Col>
-    )
+  render () {
+    const position = this.props.position ? this.props.position : 'left'
+    if (position === 'left') {
+      return (
+        <Col md={6} xs={4} className='po img-content'>
+          <img src={this.props.imgSrc} />
+        </Col>
+      )
+    } else {
+      return (
+        <Col md={6} mdOffset={6} xs={4} className='po img-content'>
+          <img src={this.props.imgSrc} />
+        </Col>
+      )
+    }
   }
+}
+
+Image.propTypes = {
+  position: PropTypes.string
 }
