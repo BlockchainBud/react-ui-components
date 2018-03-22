@@ -1,0 +1,62 @@
+footer {
+    padding: 72px 0;
+}
+
+footer.dark {
+    background: #292929;
+}
+
+footer .logo {
+    max-height: 30px;
+}
+
+footer.dark a {
+    color: #fff;
+}
+
+footer.dark span {
+    color: #fefefe;
+}
+
+.recent-posts .date {
+    display: block;
+    letter-spacing: 0;
+    opacity: .8;
+}
+
+.widget {
+  margin-bottom: 48px;
+}
+.link-list {
+  line-height: 32px;
+}
+.link-list a:after {
+  content: "\e628";
+  font-family: 'themify';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 11px;
+  display: inline-block;
+  margin-left: 8px;
+}
+.widget ul:last-child,
+.widget p:last-child {
+  margin-bottom: 0;
+}
+h6.title {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.widget hr {
+  margin-bottom: 12px;
+}

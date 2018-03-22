@@ -1,0 +1,11 @@
+.logo {
+    max-height: 60%;
+    vertical-align: middle;
+}
+
+nav.transparent .logo-dark {
+  display: none;
+}
+nav.transparent .logo-light {
+  display: inline;
+}

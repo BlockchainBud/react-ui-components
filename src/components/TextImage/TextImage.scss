@@ -1,0 +1,35 @@
+.img-content img {
+  max-width: 100%;
+}
+
+.po {
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+}
+
+.image-edge .container div[class*='col-'] {
+    position: absolute;
+}
+
+.image-edge .container {
+    position: relative;
+}
+
+.image-edge .container:after, .image-edge .container:before {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+.v-align-transform {
+    position: relative;
+    transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -50%, 0);
+    top: 50%;
+    z-index: 2;
+}
+
+.image-edge .right {
+    right: 0;
+}

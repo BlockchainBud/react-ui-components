@@ -1,0 +1,14 @@
+.nav-container {
+  -webkit-backface-visibility: hidden;
+  max-width: 100%;
+}
+
+nav {
+  background: #fff;
+  -webkit-backface-visibility: hidden;
+  max-width: 100%;
+}
+
+.nav-container.dark, .nav-container.dark nav {
+  background: #292929;
+}
