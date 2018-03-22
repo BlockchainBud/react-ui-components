@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import './HeaderLogo.css'
+import './HeaderLogo.scss'
 import defaultLogoLight from './img/logo-light.png'
 import defaultLogoDark from './img/logo-dark.png'
 

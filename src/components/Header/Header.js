@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Header.css'
+import './Header.scss'
 import Logo from './HeaderLogo/HeaderLogo'
 import HeaderNav from './HeaderNav/HeaderNav'
 import PropTypes from 'prop-types'

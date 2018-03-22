@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Grid, Col } from 'react-flexbox-grid'
 import PropTypes from 'prop-types'
-import './TextImage.css'
+import './TextImage.scss'
 
 export class TextImage extends Component {
   render () {

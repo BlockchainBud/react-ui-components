@@ -1,13 +1,11 @@
 * {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+
+  box-sizing: border-box;
 }
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
+
+  box-sizing: border-box;
 }
 
 body {
@@ -21,13 +19,18 @@ body {
   color: #666;
   overflow-x: hidden;
   min-height: 2000px;
+
+  &.boxed-layout {
+    background: #eee;
+
+    .main-container {
+      background: #fff;
+      clear: both;
+    }
+  }
 }
-body.boxed-layout {
-  background: #eee;
-}
-body.boxed-layout .main-container {
-  background: #fff;
-}
+
+body.boxed-layout
 body.boxed-layout,
 .boxed-layout .nav-container,
 .boxed-layout .main-container,
@@ -37,37 +40,50 @@ body.boxed-layout,
   left: 0;
   right: 0;
 }
+
 ul {
   list-style: none;
+
+  &.bullets {
+    list-style: inside;
+  }
 }
-ul.bullets {
-  list-style: inside;
-}
-.main-container {
-  clear: both;
-}
+
 hr {
   border: none;
   border-top: 1px solid #ccc;
   margin: 0 0 24px 0;
   width: 100%;
+
+  &.short-thick {
+    max-width: 50px;
+    border-top: 5px solid #ccc;
+    opacity: 1 !important;
+  }
 }
-hr.short-thick {
-  max-width: 50px;
-  border-top: 5px solid #ccc;
-  opacity: 1 !important;
+
+.image-bg {
+
+  hr {
+    border-color: #fff;
+    opacity: .6;
+  }
+
+  &.bg-light {
+    hr {
+      border-color: #ccc;
+      opacity: 1;
+    }
+  }
+
+  &.dark {
+    hr {
+      border-color: #555;
+    }
+  }
+
 }
-.image-bg hr {
-  border-color: #fff;
-  opacity: .6;
-}
-.image-bg.bg-light hr {
-  border-color: #ccc;
-  opacity: 1;
-}
-.dark hr {
-  border-color: #555;
-}
+
 .inline-block {
   display: inline-block;
 }
@@ -76,13 +92,16 @@ hr.short-thick {
 }
 .list-inline > li {
   padding: 0 8px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
 }
-.list-inline > li:last-child {
-  padding-right: 0;
-}
-.list-inline > li:first-child {
-  padding-left: 0;
-}
+
 .bg-primary .list-inline i {
   color: #8ed3ab;
 }
@@ -99,9 +118,10 @@ hr.short-thick {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   cursor: default;
-}
-.show-grid:hover {
-  border-color: #222;
+
+  &:hover {
+    border-color: #222;
+  }
 }
 .right {
   right: 0;
@@ -515,9 +535,9 @@ footer.dark li,
 /* SECTION & CONTAINER */
 
 section, footer {
-    padding: 96px 0;
-    position: relative;
-    overflow: hidden;
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .container {
