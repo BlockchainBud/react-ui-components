@@ -1,3 +1,3 @@
-import Button from './HeaderNav.js'
+import HeaderNav from './HeaderNav.js'
 
 export default HeaderNav;
