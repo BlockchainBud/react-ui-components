@@ -5,6 +5,7 @@ import HeaderNav from './HeaderNav/HeaderNav'
 import PropTypes from 'prop-types'
 import logoLight from './HeaderLogo/img/logo-light.png'
 import logoDark from './HeaderLogo/img/logo-dark.png'
+import NavItems from './Navigation.yaml'
 
 class Header extends Component {
   componentDidMount () {
@@ -48,7 +49,7 @@ class Header extends Component {
               <span className='ti-menu'/>
             </div>
 
-            <HeaderNav/>
+            <HeaderNav navItems={NavItems}/>
           </div>
         </nav>
       </div>
