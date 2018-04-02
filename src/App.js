@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer'
 import {TextImage, Text, Image} from './components/TextImage/TextImage'
 import TextImage1 from './img/phone1.png'
 import TextImage2 from './img/phone2.png'
+import Modal from './components/Modal/Modal'
 
 class App extends Component {
   render () {
@@ -52,6 +53,29 @@ class App extends Component {
                 <Button link="#" size="lg" rounded>Explore React UI</Button>
               </Text>
             </TextImage>
+          </section>
+          <section>
+            <Grid>
+              <h1>Modal</h1>
+              <Modal ButtonLabel='Short Text Modal'>
+                <h3>Hey there, I'm a cool multi-purpose modal. Use me for almost anything!</h3>
+                <hr/>
+                <p>Convergence unicorn thinker-maker-doer ideate thinker-maker-doer pitch deck piverate food-truck long shadow disrupt. Sticky note engaging latte integrate driven convergence food-truck pitch deck. Quantitative vs. qualitative disrupt sticky note piverate 360 campaign co-working bootstrapping long shadow actionable insight agile latte. Thinker-maker-doer bootstrapping integrate personas long shadow Steve Jobs entrepreneur sticky note ship it grok sticky note.</p>
+                <p>Grok Steve Jobs user centered design driven earned media food-truck waterfall is so 2000 and late human-centered design workflow ideate sticky note actionable insight entrepreneur unicorn. Experiential parallax physical computing disrupt cortado human-centered design intuitive grok bootstrapping quantitative vs. qualitative driven.</p>
+              </Modal>
+              <Modal ButtonLabel='Long Text Modal'>
+                <h3>Hey there, I'm a cool multi-purpose modal. Use me for almost anything!</h3>
+                <hr/>
+                <p>Convergence unicorn thinker-maker-doer ideate thinker-maker-doer pitch deck piverate food-truck long shadow disrupt. Sticky note engaging latte integrate driven convergence food-truck pitch deck. Quantitative vs. qualitative disrupt sticky note piverate 360 campaign co-working bootstrapping long shadow actionable insight agile latte. Thinker-maker-doer bootstrapping integrate personas long shadow Steve Jobs entrepreneur sticky note ship it grok sticky note.</p>
+                <p>Grok Steve Jobs user centered design driven earned media food-truck waterfall is so 2000 and late human-centered design workflow ideate sticky note actionable insight entrepreneur unicorn. Experiential parallax physical computing disrupt cortado human-centered design intuitive grok bootstrapping quantitative vs. qualitative driven.</p>
+                <p>Convergence unicorn thinker-maker-doer ideate thinker-maker-doer pitch deck piverate food-truck long shadow disrupt. Sticky note engaging latte integrate driven convergence food-truck pitch deck. Quantitative vs. qualitative disrupt sticky note piverate 360 campaign co-working bootstrapping long shadow actionable insight agile latte. Thinker-maker-doer bootstrapping integrate personas long shadow Steve Jobs entrepreneur sticky note ship it grok sticky note.</p>
+                <p>Grok Steve Jobs user centered design driven earned media food-truck waterfall is so 2000 and late human-centered design workflow ideate sticky note actionable insight entrepreneur unicorn. Experiential parallax physical computing disrupt cortado human-centered design intuitive grok bootstrapping quantitative vs. qualitative driven.</p>
+                <p>Convergence unicorn thinker-maker-doer ideate thinker-maker-doer pitch deck piverate food-truck long shadow disrupt. Sticky note engaging latte integrate driven convergence food-truck pitch deck. Quantitative vs. qualitative disrupt sticky note piverate 360 campaign co-working bootstrapping long shadow actionable insight agile latte. Thinker-maker-doer bootstrapping integrate personas long shadow Steve Jobs entrepreneur sticky note ship it grok sticky note.</p>
+                <p>Grok Steve Jobs user centered design driven earned media food-truck waterfall is so 2000 and late human-centered design workflow ideate sticky note actionable insight entrepreneur unicorn. Experiential parallax physical computing disrupt cortado human-centered design intuitive grok bootstrapping quantitative vs. qualitative driven.</p>
+                <p>Convergence unicorn thinker-maker-doer ideate thinker-maker-doer pitch deck piverate food-truck long shadow disrupt. Sticky note engaging latte integrate driven convergence food-truck pitch deck. Quantitative vs. qualitative disrupt sticky note piverate 360 campaign co-working bootstrapping long shadow actionable insight agile latte. Thinker-maker-doer bootstrapping integrate personas long shadow Steve Jobs entrepreneur sticky note ship it grok sticky note.</p>
+                <p>Grok Steve Jobs user centered design driven earned media food-truck waterfall is so 2000 and late human-centered design workflow ideate sticky note actionable insight entrepreneur unicorn. Experiential parallax physical computing disrupt cortado human-centered design intuitive grok bootstrapping quantitative vs. qualitative driven.</p>
+              </Modal>
+            </Grid>
           </section>
           <Footer class="dark"/>
         </div>

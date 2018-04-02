@@ -88,6 +88,7 @@ class Button extends Component {
         style={Object.assign(this.state.style)}
         onMouseOver={this._toggleHover}
         onMouseOut={this._toggleHover}
+        onClick={this.props.modal}
       >
         {this.props.children}
       </a>
@@ -101,6 +102,7 @@ Button.propTypes = {
   rounded: PropTypes.bool,
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   link: PropTypes.string,
+  modal: PropTypes.func,
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.string])
 }
 

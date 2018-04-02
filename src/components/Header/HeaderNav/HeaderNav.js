@@ -66,7 +66,7 @@ const SubMenu = function (props) {
 }
 
 SubMenu.propTypes = {
-  items: PropTypes.object
+  items: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 }
 
 const Link = function (props) {
