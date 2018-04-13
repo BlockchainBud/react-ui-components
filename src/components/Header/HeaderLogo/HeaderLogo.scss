@@ -3,9 +3,15 @@
     vertical-align: middle;
 }
 
-nav.transparent .logo-dark {
-  display: none;
+nav {
+  &.transparent {
+    .logo-dark {
+      display: none;
+    }
+
+    .logo-light {
+      display: inline;
+    }
+  }
 }
-nav.transparent .logo-light {
-  display: inline;
-}
+

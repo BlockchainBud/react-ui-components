@@ -4,63 +4,36 @@ import './HeaderNav.scss'
 
 class HeaderNav extends Component {
   render () {
-    return (
-      <div className='module-group right'>
-        <div className='module left'>
-          <HeaderNavMenu class='menu'>
-            <HeaderNavLink to='#' label='Home'/>
-            <HeaderNavLink to='#' label='About' class='has-dropdown'>
-              <HeaderNavMenu class='mega-menu'>
-                <HeaderNavLink>
-                  <HeaderNavMenu>
-                    <HeaderNavLink label='Concepts'/>
-                    <HeaderNavLink to='#' label='Our Company'/>
-                    <HeaderNavLink to='#' label='Our Team'/>
-                    <HeaderNavLink to='#' label='Our Process'/>
-                  </HeaderNavMenu>
-                </HeaderNavLink>
-                <HeaderNavLink>
-                  <HeaderNavMenu>
-                    <HeaderNavLink label='Concepts 1'/>
-                    <HeaderNavLink to='#' label='Our Company'/>
-                    <HeaderNavLink to='#' label='Our Team'/>
-                    <HeaderNavLink to='#' label='Our Process'/>
-                  </HeaderNavMenu>
-                </HeaderNavLink>
-              </HeaderNavMenu>
-            </HeaderNavLink>
-            <HeaderNavLink to='#' label='Pages' class='has-dropdown'>
-              <HeaderNavMenu>
-                <HeaderNavLink to='#' label='Our Company'/>
-                <HeaderNavLink to='#' label='Our Team'/>
-                <HeaderNavLink to='#' label='Our Process'/>
-              </HeaderNavMenu>
-            </HeaderNavLink>
-            <HeaderNavLink to='#' label='Elements'/>
-            <HeaderNavLink to='#' label='Portfolio'/>
-            <HeaderNavLink to='#' label='Shop'/>
-            <HeaderNavLink to='#' label='Blog'/>
-          </HeaderNavMenu>
+    const nav = this.props.navItems
+
+    const navItems = nav.map((item, index) => (
+      <HeaderNavLink
+        to={item.link}
+        label={item.title}
+        key={index}
+        class={item.class}
+        items={item.items}
+      />
+    ))
+
+    if (nav) {
+      return (
+        <div className='module-group right'>
+          <div className='module left'>
+            <ul className='menu'>
+              {navItems}
+            </ul>
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
   }
-}
-
-const HeaderNavMenu = (props) =>
-  <ul className={props.class}>
-    {props.children}
-  </ul>
-
-HeaderNavMenu.propTypes = {
-  class: PropTypes.string,
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 }
 
 const HeaderNavLink = (props) =>
   <li className={props.class}>
     <Link href={props.to} label={props.label}/>
-    {props.children}
+    <SubMenu items={props.items} />
   </li>
 
 HeaderNavLink.propTypes = {
@@ -68,6 +41,32 @@ HeaderNavLink.propTypes = {
   label: PropTypes.string,
   to: PropTypes.string,
   children: PropTypes.object
+}
+
+const SubMenu = function (props) {
+  const items = props.items
+  if (items) {
+    // Check if there is two items, so it will be mega menu
+    const ulClass = (items[1].items) ? 'mega-menu' : null
+    return (
+      <ul className={ulClass}>
+        {items.map((item, index) => (
+          <HeaderNavLink
+            to={item.link}
+            label={item.title}
+            key={index}
+            class={item.class}
+            items={item.items}
+          />
+        ))}
+      </ul>
+    )
+  }
+  return null
+}
+
+SubMenu.propTypes = {
+  items: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 }
 
 const Link = function (props) {
@@ -84,7 +83,6 @@ const Link = function (props) {
       <span className='title'>{props.label}</span>
     )
   }
-
   return null
 }
 

@@ -1,0 +1,19 @@
+a.close-button {
+  z-index: 4;
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(41, 41, 41, 0.8);
+  z-index: 999;
+}

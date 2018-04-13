@@ -1,3 +1,3 @@
-import Button from './HeaderLogo.js'
+import HeaderLogo from './HeaderLogo.js'
 
 export default HeaderLogo;

@@ -1,3 +1,3 @@
-import Button from './TextImage.js'
+import TextImage from './TextImage.js'
 
-export default TextImage;
+export default TextImage
