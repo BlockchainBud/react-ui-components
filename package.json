@@ -50,7 +50,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "start-storybook": "start-storybook -s ./public -p 9001"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -98,6 +100,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.3",
     "eslint": "^4.19.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
